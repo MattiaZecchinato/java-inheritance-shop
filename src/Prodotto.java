@@ -50,4 +50,14 @@ public class Prodotto {
     public void setIva(BigDecimal iva) {
         this.iva = iva;
     }
+
+    public BigDecimal calculatePriceIva() {
+        BigDecimal calcIva = BigDecimal.ZERO;
+
+        if (this.price.compareTo(BigDecimal.ZERO) > 0) {
+            calcIva = this.price.multiply(this.iva).divide(new BigDecimal(100));
+        }
+
+        return this.price.add(calcIva);
+    }
 }
