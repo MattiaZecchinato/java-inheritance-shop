@@ -24,7 +24,9 @@ public class Prodotto {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null) {
+            this.name = name;
+        }
     }
 
     public String getBrand() {
@@ -32,7 +34,9 @@ public class Prodotto {
     }
 
     public void setBrand(String brand) {
-        this.brand = brand;
+        if (brand != null) {
+            this.brand = brand;
+        }
     }
 
     public BigDecimal getPrice() {
@@ -40,7 +44,9 @@ public class Prodotto {
     }
 
     public void setPrice(BigDecimal price) {
-        this.price = price;
+        if (price.compareTo(BigDecimal.ZERO) > 0) {
+            this.price = price;
+        }
     }
 
     public BigDecimal getIva() {
