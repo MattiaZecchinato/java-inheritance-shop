@@ -61,4 +61,10 @@ public class Televisori extends Prodotto {
     public Boolean getIsSmart() {
         return this.isSmart;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format("Smart TV: '%s'\nMeasurement:\nWidth: '%f'\nHeight: '%f'\nDepth: '%f'",
+                this.isSmart, this.width, this.height, this.depth);
+    }
 }

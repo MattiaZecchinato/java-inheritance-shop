@@ -22,4 +22,9 @@ public class Cuffie extends Prodotto {
     public boolean getIsWireless() {
         return this.isWireless;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format("Colour: '%s'\nWireless: '%s'", this.colour, this.isWireless);
+    }
 }

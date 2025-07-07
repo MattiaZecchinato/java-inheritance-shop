@@ -66,4 +66,10 @@ public class Prodotto {
 
         return this.price.add(calcIva);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Code: '%s'\nName: '%s'\nBrand: '%s'\nPrice: '%s'\nIva: '%s'\n", this.code, this.name,
+                this.brand, this.price, this.iva);
+    }
 }

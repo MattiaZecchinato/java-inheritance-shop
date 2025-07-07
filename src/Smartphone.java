@@ -22,4 +22,10 @@ public class Smartphone extends Prodotto {
     public void setMemoryCapacity(int memoryCapacity) {
         this.memoryCapacity = memoryCapacity;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + String.format("IMEI code: '%s'\nMemory capacity: '%d'", this.IMEIcode, this.memoryCapacity);
+    }
 }
